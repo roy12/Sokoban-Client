@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import view.GuiDisplayer?>
+
+<BorderPane prefHeight="324.0" prefWidth="344.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainWindowController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#openFile" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveFile" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#restartLevel" text="Restart" />
+                  <MenuItem mnemonicParsing="false" onAction="#getCurrentLevelSession" text="Scoreboard" />
+              <MenuItem mnemonicParsing="false" onAction="#exit" text="Close" />
+            </items>
+          </Menu>
+           <Menu mnemonicParsing="false" text="Options">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#getFullSolution" text="Solution" />
+            </items>
+             <items>
+              <MenuItem mnemonicParsing="false" onAction="#getHint" text="Hint" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <!--<VBox prefHeight="200.0" prefWidth="53.0" BorderPane.alignment="CENTER" />  -->
+   </left>
+   <center>
+      <GuiDisplayer fx:id="gd" height="300.0" width="300.0" openPageFileName="./recources/OpenGame/Open_Game2.png" finishFileName="./recources/FinishLevel/Finish.png" wallFileName="./recources/LevelObjects/Wall.png" boxFileName="./recources/LevelObjects/Box.png" playerFileName="./recources/Players/Saya/Player_Up.png" moveDownFileName="./recources/Players/Saya/Player_Down.png" moveUpFileName="./recources/Players/Saya/Player_Up.png" moveRightFileName="./recources/Players/Saya/Player_Right.png" moveLeftFileName="./recources/Players/Saya/Player_Left.png" floorFileName="./recources/LevelObjects/Floor.png" targetFileName="./recources/LevelObjects/Target.png" BorderPane.alignment="CENTER" />
+      <!--   -->
+   </center>    
+    <bottom>
+  <HBox prefHeight="46.0" prefWidth="353.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Steps:">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="0.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+            <Label fx:id="stepsLabel" text="Steps:">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="0.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+             <Label text="Timer:">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="0.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+            <Label fx:id="timerLabel" text="Timer:">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="0.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+         </children></HBox>
+      </bottom>
+</BorderPane>
